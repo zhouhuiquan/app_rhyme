@@ -30,13 +30,13 @@ jobs:
         with:
           submodules: true
 
-      - name: Replace key
-        env:
-          SOME_SECRET_KEY: ${{ secrets.SOME_SECRET_KEY }}
-          SOME_REPLACE_KEY: ${{ secrets.SOME_REPLACE_KEY }}
-          SOME_REPLACE_FILE: ${{ secrets.SOME_REPLACE_FILE }}
-        run: |
-          python tools/key_replace.py
+      # - name: Replace key
+      #   env:
+      #     SOME_SECRET_KEY: ${{ secrets.SOME_SECRET_KEY }}
+      #     SOME_REPLACE_KEY: ${{ secrets.SOME_REPLACE_KEY }}
+      #     SOME_REPLACE_FILE: ${{ secrets.SOME_REPLACE_FILE }}
+      #   run: |
+      #     python tools/key_replace.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
